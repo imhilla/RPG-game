@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/imhilla/RPG-game#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
     "csv-loader": "^3.0.3",
     "file-loader": "^6.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "phaser": "^3.24.1"
   }
 }
