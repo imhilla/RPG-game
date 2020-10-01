@@ -1,0 +1,28 @@
+{
+  "name": "rpg-game",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imhilla/RPG-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imhilla/RPG-game/issues"
+  },
+  "homepage": "https://github.com/imhilla/RPG-game#readme",
+  "devDependencies": {
+    "csv-loader": "^3.0.3",
+    "file-loader": "^6.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "xml-loader": "^1.2.1"
+  }
+}
