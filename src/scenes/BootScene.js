@@ -1,5 +1,5 @@
 import 'phaser';
-import logoImg from "../assets/logo.png";
+//import logoImg from "../assets/logo.png";
 import tiles from '../assets/map/spritesheet.png'
 import map from '../assets/map/map.json'
 import player from '../assets/RPG_assets.png'
@@ -25,6 +25,3 @@ export default class BootScene extends Phaser.Scene {
     this.scene.start('WorldScene');
   }
 };
-
-
-
