@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const SRC = path.resolve(__dirname, 'node_modules');
 
 module.exports = {
   mode: 'development',
@@ -28,6 +29,11 @@ module.exports = {
         use: [
           'file-loader',
         ],
+      },
+      {
+        test: /\.mp3$/,
+        include: SRC,
+        loader: 'file-loader'
       },
       {
         test: /\.(csv|tsv)$/,
@@ -60,15 +66,15 @@ module.exports = {
     ],
   },
   plugins: [
-      new CleanWebpackPlugin({
-        root: path.resolve(__dirname, "../")
-      }),
+    new CleanWebpackPlugin({
+      root: path.resolve(__dirname, "../")
+    }),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true)
     }),
-      new HtmlWebpackPlugin({
-        template: "./index.html"
-      })
+    new HtmlWebpackPlugin({
+      template: "./index.html"
+    })
   ]
 };
