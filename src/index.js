@@ -1,34 +1,12 @@
 import 'phaser';
-import tiles from './assets/map/spritesheet.png'
-import map from './assets/map/map.json'
-import player from './assets/RPG_assets.png'
-
-var BootScene = new Phaser.Class({
-
-  Extends: Phaser.Scene,
-
-  initialize:
-
-    function BootScene() {
-      Phaser.Scene.call(this, { key: 'BootScene' });
-    },
-
-  preload: function () {
-    // map tiles
-    this.load.image('tiles', tiles);
-
-    // map in json format
-    this.load.tilemapTiledJSON('map', map);
-
-    // our two characters
-    this.load.spritesheet('player', player, { frameWidth: 16, frameHeight: 16 });
-  },
-
-  create: function () {
-    // start the WorldScene
-    this.scene.start('WorldScene');
-  }
-});
+// import config from './Config/config';
+// import GameScene from './Scenes/GameScene';
+import BootScene from './Scenes/BootScene';
+// import PreloaderScene from './Scenes/PreloaderScene';
+// import TitleScene from './Scenes/TitleScene';
+// import OptionsScene from './Scenes/OptionsScene';
+// import CreditsScene from './Scenes/CreditsScene';
+// import Model from './Model';
 
 var WorldScene = new Phaser.Class({
 
@@ -198,14 +176,7 @@ var game = new Phaser.Game(config);
 
 
 
-// import config from './Config/config';
-// import GameScene from './Scenes/GameScene';
-// import BootScene from './Scenes/BootScene';
-// import PreloaderScene from './Scenes/PreloaderScene';
-// import TitleScene from './Scenes/TitleScene';
-// import OptionsScene from './Scenes/OptionsScene';
-// import CreditsScene from './Scenes/CreditsScene';
-// import Model from './Model';
+
 
 // class Game extends Phaser.Game {
 //   constructor() {

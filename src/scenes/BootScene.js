@@ -1,28 +1,30 @@
-// import 'phaser';
+import 'phaser';
+import logoImg from "../assets/logo.png";
+import tiles from '../assets/map/spritesheet.png'
+import map from '../assets/map/map.json'
+import player from '../assets/RPG_assets.png'
 
+export default class BootScene extends Phaser.Scene {
+  constructor() {
+    super('BootScene');
+  }
 
-// import logoImg from "../assets/logo.png";
+  preload() {
+    // map tiles
+    this.load.image('tiles', tiles);
 
-// export default class BootScene extends Phaser.Scene {
-//   constructor() {
-//     super('Boot');
-//   }
+    // map in json format
+    this.load.tilemapTiledJSON('map', map);
 
-//   preload() {
-//     // map tiles
-//     this.load.image('tiles', 'assets/map/spritesheet.png');
+    // our two characters
+    this.load.spritesheet('player', player, { frameWidth: 16, frameHeight: 16 });
+  }
 
-//     // map in json format
-//     this.load.tilemapTiledJSON('map', 'assets/map/map.json');
-
-//     // our two characters
-//     this.load.spritesheet('player', 'assets/RPG_assets.png', { frameWidth: 16, frameHeight: 16 });
-//   }
-
-//   create() {
-//     this.scene.start('WorldScene');
-//   }
-// };
+  create() {
+    // start the WorldScene
+    this.scene.start('WorldScene');
+  }
+};
 
 
 
