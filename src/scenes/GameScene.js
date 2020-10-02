@@ -1,6 +1,5 @@
 import 'phaser';
 import logoImg from "../assets/logo.png";
-
  
 export default class GameScene extends Phaser.Scene {
   constructor () {
